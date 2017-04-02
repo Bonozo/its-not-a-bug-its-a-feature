@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public float jumpForce = 200.0f;
+    public float jumpForce = 500.0f;
+    public float pushForce = 500.0f;
+    public float hp = 100.0f;
+    public Rigidbody rigidBody;
     public GameObject pfxPrefab;
     public GameObject xploPrefab;
     public GameplayMgr gameplayMgr;
     public CameraController cameraController;
-    public float hp = 100.0f;
 
-    public Rigidbody rigidBody;
     private MeshRenderer renderObject;
     private GameObject pfxAttached;
 
 	// Use this for initialization
 	void Start ()
     {
-        rigidBody = GetComponent<Rigidbody>();
         renderObject = GetComponent<MeshRenderer>();
 
         if (pfxPrefab)
@@ -48,23 +48,23 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W))
         {
-            rigidBody.AddForce(new Vector3(0.0f, 0.0f, 50.0f));// (gameObject.transform.forward * 50.0f );
+            rigidBody.AddForce(new Vector3(0.0f, 0.0f, pushForce));// (gameObject.transform.forward * 50.0f );
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidBody.AddForce(new Vector3(0.0f, 0.0f, -50.0f));//(gameObject.transform.forward * -50.0f);
+            rigidBody.AddForce(new Vector3(0.0f, 0.0f, -pushForce));//(gameObject.transform.forward * -50.0f);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rigidBody.AddForce(new Vector3(-50.0f, 0.0f, 0.0f));//(gameObject.transform.right * -50.0f);
+            rigidBody.AddForce(new Vector3(-pushForce, 0.0f, 0.0f));//(gameObject.transform.right * -50.0f);
             //rigidBody.AddTorque(new Vector3(0.0f, -2.0f, 0.0f));
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rigidBody.AddForce(new Vector3(50.0f, 0.0f, 0.0f));//(gameObject.transform.right * 50.0f);
+            rigidBody.AddForce(new Vector3(pushForce, 0.0f, 0.0f));//(gameObject.transform.right * 50.0f);
             //rigidBody.AddTorque(new Vector3(0.0f, 2.0f, 0.0f));
         }
 /*
