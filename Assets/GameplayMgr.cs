@@ -20,7 +20,7 @@ public class GameplayMgr : MonoBehaviour{
         Player player = playerObj.GetComponent<Player>();
         player.gameplayMgr = gameObject.GetComponent<GameplayMgr>();
         player.cameraController = cameraController.GetComponent<CameraController>();
-        player.cameraController.player = playerObj;
+        player.cameraController.player = player;
     }
 
     public void GameOver()

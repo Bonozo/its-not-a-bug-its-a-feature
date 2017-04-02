@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    public GameObject player;
+    public Player player;
     public float camDist = -15.0f;
 
     private Vector3 destPos;
@@ -26,8 +26,8 @@ public class CameraController : MonoBehaviour {
     {
         if (player)
         {
-            Vector3 playerPos = player.transform.position;
-            Vector3 playerDir = player.transform.forward;
+            Vector3 playerPos = player.rigidBody.transform.position;
+            Vector3 playerDir = player.rigidBody.transform.forward;
 
             //2d destPos = playerPos + new Vector3(0.0f, 0.0f, camDist);
 
@@ -41,7 +41,7 @@ public class CameraController : MonoBehaviour {
             float z = Mathf.Lerp(transform.position.z, destPos.z, 1.0f);//Time.deltaTime);
 
             transform.position = new Vector3(x, y, z);
-            transform.LookAt(player.transform);
+            transform.LookAt(player.rigidBody.transform);
         }
     }
 }
