@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameplayMgr : MonoBehaviour{
 
     public GameObject RespawnPoint;
     public GameObject Player;
     public GameObject cameraController;
+    public Text ScoreText;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +28,14 @@ public class GameplayMgr : MonoBehaviour{
     public void GameOver()
     {
         SpawnPlayer();
+    }
+
+    public void SetScore(int points)
+    {
+        if (ScoreText == null)
+            return;
+
+        ScoreText.text = points.ToString("D9");
     }
 
     // Update is called once per frame

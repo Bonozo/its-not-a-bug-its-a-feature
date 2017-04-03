@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 
     private MeshRenderer renderObject;
     private GameObject pfxAttached;
-
+    private float Score = 0.0f;
 	// Use this for initialization
 	void Start ()
     {
@@ -36,6 +36,13 @@ public class Player : MonoBehaviour {
             pfxAttached.transform.localScale *= 0.5f;
             pfxAttached.transform.parent = gameObject.transform;
         }
+    }
+
+    public void UpdateScore()
+    {
+        Score += -rigidBody.velocity.y;
+
+        gameplayMgr.SetScore((int)Score);
     }
 
     // Update is called once per frame
@@ -67,18 +74,21 @@ public class Player : MonoBehaviour {
             rigidBody.AddForce(new Vector3(pushForce, 0.0f, 0.0f));//(gameObject.transform.right * 50.0f);
             //rigidBody.AddTorque(new Vector3(0.0f, 2.0f, 0.0f));
         }
-/*
-        if( rigidBody.velocity.magnitude < 0.1f )
-        {
-            if(pfxAttached.activeSelf==false)
-            pfxAttached.SetActive(true);
-        }
-        else
-        {
-            if (pfxAttached.activeSelf == false)
-                pfxAttached.SetActive(true);
-        }
-*/
+        /*
+                if( rigidBody.velocity.magnitude < 0.1f )
+                {
+                    if(pfxAttached.activeSelf==false)
+                    pfxAttached.SetActive(true);
+                }
+                else
+                {
+                    if (pfxAttached.activeSelf == false)
+                        pfxAttached.SetActive(true);
+                }
+        */
+
+
+        UpdateScore();
     }
 
     private IEnumerator Flash()
