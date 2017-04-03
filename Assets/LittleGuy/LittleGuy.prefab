@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4041029174191404}
   - component: {fileID: 95868765526887328}
+  - component: {fileID: 114908665663656708}
   m_Layer: 0
   m_Name: LittleGuy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ GameObject:
   - component: {fileID: 4082567920427376}
   m_Layer: 0
   m_Name: thumbdistal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ GameObject:
   - component: {fileID: 4649852727865748}
   m_Layer: 0
   m_Name: middleintermediate.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +71,7 @@ GameObject:
   - component: {fileID: 144063123576790524}
   m_Layer: 0
   m_Name: lowerarm.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +86,7 @@ GameObject:
   - component: {fileID: 4577648716378630}
   m_Layer: 0
   m_Name: ringintermediate.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +103,7 @@ GameObject:
   - component: {fileID: 54273554479531776}
   m_Layer: 0
   m_Name: hips
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +118,7 @@ GameObject:
   - component: {fileID: 4875586592509168}
   m_Layer: 0
   m_Name: shoulder.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +133,7 @@ GameObject:
   - component: {fileID: 4717975782464236}
   m_Layer: 0
   m_Name: thumbdistal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +148,7 @@ GameObject:
   - component: {fileID: 4884026385257850}
   m_Layer: 0
   m_Name: thumbdistal.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +199,7 @@ GameObject:
   - component: {fileID: 4268434770174510}
   m_Layer: 0
   m_Name: indexdistal.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +229,7 @@ GameObject:
   - component: {fileID: 4853329173809178}
   m_Layer: 0
   m_Name: ringdistal.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +244,7 @@ GameObject:
   - component: {fileID: 4397523709859372}
   m_Layer: 0
   m_Name: pinkyintermediate.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +259,7 @@ GameObject:
   - component: {fileID: 4569989403326790}
   m_Layer: 0
   m_Name: indexintermediate.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +274,7 @@ GameObject:
   - component: {fileID: 4709380085391780}
   m_Layer: 0
   m_Name: ringdistal.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,7 +289,7 @@ GameObject:
   - component: {fileID: 4590899131306008}
   m_Layer: 0
   m_Name: thumbproximal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +304,7 @@ GameObject:
   - component: {fileID: 4383694132426184}
   m_Layer: 0
   m_Name: hand.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +334,7 @@ GameObject:
   - component: {fileID: 4975738087791292}
   m_Layer: 0
   m_Name: pinkyintermediate.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +349,7 @@ GameObject:
   - component: {fileID: 4869226872106628}
   m_Layer: 0
   m_Name: indexintermediate.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,7 +364,7 @@ GameObject:
   - component: {fileID: 4556768625194626}
   m_Layer: 0
   m_Name: MecanimRig.004
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +394,7 @@ GameObject:
   - component: {fileID: 4482753672753142}
   m_Layer: 0
   m_Name: middledistal.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +409,7 @@ GameObject:
   - component: {fileID: 4014090653547490}
   m_Layer: 0
   m_Name: middleproximal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,7 +424,7 @@ GameObject:
   - component: {fileID: 4576356958356872}
   m_Layer: 0
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +439,7 @@ GameObject:
   - component: {fileID: 4848186355242510}
   m_Layer: 0
   m_Name: ringintermediate.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +454,7 @@ GameObject:
   - component: {fileID: 4131944978942634}
   m_Layer: 0
   m_Name: ringproximal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,7 +469,7 @@ GameObject:
   - component: {fileID: 4534783604920100}
   m_Layer: 0
   m_Name: head_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +487,7 @@ GameObject:
   - component: {fileID: 144283085215880612}
   m_Layer: 0
   m_Name: lowerarm.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +502,7 @@ GameObject:
   - component: {fileID: 4365494537629830}
   m_Layer: 0
   m_Name: shoulder.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +520,7 @@ GameObject:
   - component: {fileID: 144369158423211078}
   m_Layer: 0
   m_Name: spine
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +553,7 @@ GameObject:
   - component: {fileID: 4340783057455876}
   m_Layer: 0
   m_Name: pinkydistal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,7 +568,7 @@ GameObject:
   - component: {fileID: 4516941980926056}
   m_Layer: 0
   m_Name: ringdistal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +583,7 @@ GameObject:
   - component: {fileID: 4628455819720426}
   m_Layer: 0
   m_Name: pinkydistal.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +598,7 @@ GameObject:
   - component: {fileID: 4576508302777008}
   m_Layer: 0
   m_Name: thumbproximal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,7 +613,7 @@ GameObject:
   - component: {fileID: 4218608224271910}
   m_Layer: 0
   m_Name: middledistal.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,7 +628,7 @@ GameObject:
   - component: {fileID: 4621407183141952}
   m_Layer: 0
   m_Name: middledistal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +643,7 @@ GameObject:
   - component: {fileID: 4753486787587116}
   m_Layer: 0
   m_Name: middleproximal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -657,7 +658,7 @@ GameObject:
   - component: {fileID: 4085634243823408}
   m_Layer: 0
   m_Name: thumbdistal.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +688,7 @@ GameObject:
   - component: {fileID: 4491790946531760}
   m_Layer: 0
   m_Name: pinkyproximal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +703,7 @@ GameObject:
   - component: {fileID: 4343495618942920}
   m_Layer: 0
   m_Name: indexproximal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,7 +721,7 @@ GameObject:
   - component: {fileID: 144124192014766980}
   m_Layer: 0
   m_Name: upperarm.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -735,7 +736,7 @@ GameObject:
   - component: {fileID: 4214958218548530}
   m_Layer: 0
   m_Name: pinkydistal.R_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -750,7 +751,7 @@ GameObject:
   - component: {fileID: 4818741463889290}
   m_Layer: 0
   m_Name: indexdistal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +796,7 @@ GameObject:
   - component: {fileID: 4953334254489088}
   m_Layer: 0
   m_Name: pinkydistal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -810,7 +811,7 @@ GameObject:
   - component: {fileID: 4393715715359484}
   m_Layer: 0
   m_Name: hand.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,7 +842,7 @@ GameObject:
   - component: {fileID: 4637477012970502}
   m_Layer: 0
   m_Name: ringdistal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,7 +857,7 @@ GameObject:
   - component: {fileID: 4037158681831834}
   m_Layer: 0
   m_Name: indexproximal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -871,7 +872,7 @@ GameObject:
   - component: {fileID: 4834348723842630}
   m_Layer: 0
   m_Name: middledistal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -904,7 +905,7 @@ GameObject:
   - component: {fileID: 4382776576501346}
   m_Layer: 0
   m_Name: thumbintermediate.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -922,7 +923,7 @@ GameObject:
   - component: {fileID: 144843686357100334}
   m_Layer: 0
   m_Name: neck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,7 +938,7 @@ GameObject:
   - component: {fileID: 4057754906295346}
   m_Layer: 0
   m_Name: chest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +953,7 @@ GameObject:
   - component: {fileID: 4307854659591900}
   m_Layer: 0
   m_Name: indexdistal.L_end
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,7 +968,7 @@ GameObject:
   - component: {fileID: 4389433902610882}
   m_Layer: 0
   m_Name: thumbintermediate.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -982,7 +983,7 @@ GameObject:
   - component: {fileID: 4905591442157800}
   m_Layer: 0
   m_Name: middleintermediate.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -997,7 +998,7 @@ GameObject:
   - component: {fileID: 4291441303939684}
   m_Layer: 0
   m_Name: indexdistal.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1012,7 +1013,7 @@ GameObject:
   - component: {fileID: 4073101824056670}
   m_Layer: 0
   m_Name: ringproximal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,7 +1031,7 @@ GameObject:
   - component: {fileID: 144696917758895088}
   m_Layer: 0
   m_Name: upperarm.L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,7 +1046,7 @@ GameObject:
   - component: {fileID: 4391705966386726}
   m_Layer: 0
   m_Name: pinkyproximal.R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1086,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002763894747838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.93, y: 601, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4957007724186570}
@@ -2193,6 +2194,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114908665663656708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002763894747838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b49aa44d8b98384d808cae9e5df6521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootBone: {fileID: 54273554479531776}
 --- !u!135 &135600345393059532
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2413,7 +2426,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23316075, y: 0.07791567, z: 0.06517669}
+  m_ConnectedAnchor: {x: -0.23316072, y: 0.07790864, z: 0.06517857}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2455,7 +2468,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000014901165, y: 0.34570995, z: -0.000000044703494}
+  m_ConnectedAnchor: {x: -0.000008076431, y: 0.34572545, z: 0.000005617739}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2497,7 +2510,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000002980233, y: 0.30278116, z: 0.000000014901163}
+  m_ConnectedAnchor: {x: -0.00000065565126, y: 0.30280003, z: 0.000016376378}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2539,7 +2552,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.3250606, y: 0.7400425, z: -0.039219316}
+  m_ConnectedAnchor: {x: 0.3250606, y: 0.7400201, z: -0.039215762}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2581,7 +2594,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.23316078, y: 0.07791566, z: 0.06517657}
+  m_ConnectedAnchor: {x: 0.23316075, y: 0.07790864, z: 0.06517847}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2623,7 +2636,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.30278134, z: -0.000000059604645}
+  m_ConnectedAnchor: {x: 0.00000071525585, y: 0.30280006, z: 0.000016272068}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2665,7 +2678,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.6991267e-15, y: 0.14496277, z: -0.000000011175873}
+  m_ConnectedAnchor: {x: -9.32633e-14, y: 0.14496416, z: -0.00000039115554}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2707,7 +2720,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000002980233, y: 0.34570995, z: 0}
+  m_ConnectedAnchor: {x: 0.000008091332, y: 0.34572533, z: 0.0000056326403}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2749,7 +2762,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.32506046, y: 0.74004215, z: -0.03921927}
+  m_ConnectedAnchor: {x: -0.32506037, y: 0.74002004, z: -0.03921577}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2791,7 +2804,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000020320925, y: 0.8927437, z: -0.08594656}
+  m_ConnectedAnchor: {x: -0.000000020490365, y: 0.8927199, z: -0.0859428}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
