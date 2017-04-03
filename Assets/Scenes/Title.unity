@@ -534,6 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voxel: {fileID: 1135469652527212, guid: 8440bbaa56a16b84ead689676c6b2292, type: 2}
   watever: {fileID: 1135469652527212, guid: d0bbde83f60716745a937e358d6b44a6, type: 2}
+  roid: {fileID: 100000, guid: 6824a22db6f52424bbe7d102ce465552, type: 3}
 --- !u!4 &930205615
 Transform:
   m_ObjectHideFlags: 0
