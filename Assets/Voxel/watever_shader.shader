@@ -49,8 +49,8 @@ Shader "Shader Forge/NewShader" {
                 float2 node_9692_tc_rcp = float2(1.0,1.0)/float2( node_9202, node_9202 );
                 float node_9692_ty = floor(node_9202 * node_9692_tc_rcp.x);
                 float node_9692_tx = node_9202 - node_9202 * node_9692_ty;
-                float4 node_3742 = _Time + _TimeEditor;
-                float node_716_ang = node_3742.g;
+                float4 node_6396 = _Time + _TimeEditor;
+                float node_716_ang = node_6396.g;
                 float node_716_spd = 1.0;
                 float node_716_cos = cos(node_716_spd*node_716_ang);
                 float node_716_sin = sin(node_716_spd*node_716_ang);
@@ -67,11 +67,9 @@ Shader "Shader Forge/NewShader" {
                 float2 node_7855_skew = node_3304 + 0.2127+node_3304.x*0.3713*node_3304.y;
                 float2 node_7855_rnd = 4.789*sin(489.123*(node_7855_skew));
                 float node_7855 = frac(node_7855_rnd.x*node_7855_rnd.y*(1+node_7855_skew.x));
-                float3 node_4547 = float3(float2(node_4091,node_7855),node_7855);
-                float node_3191 = sin(node_7855);
                 float4 node_6889 = _Time + _TimeEditor;
-                float3 node_2702 = ((node_4547*saturate(3.0*abs(1.0-2.0*frac(node_3191+float3(0.0,-1.0/3.0,1.0/3.0)))-1)*node_6889.r)*_col.rgb);
-                float3 emissive = (node_2702*_brightness);
+                float3 node_2702 = ((float3(float2(node_4091,node_7855),node_7855)*saturate(3.0*abs(1.0-2.0*frac(sin(node_7855)+float3(0.0,-1.0/3.0,1.0/3.0)))-1)*node_6889.r)*_col.rgb);
+                float3 emissive = clamp(node_2702,0.0,_brightness);
                 float3 finalColor = emissive;
                 return fixed4(finalColor,1);
             }

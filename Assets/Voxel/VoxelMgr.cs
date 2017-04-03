@@ -46,7 +46,7 @@ public class VoxelMgr : MonoBehaviour {
     {
         MultiSpawner(watever, 50, 100.0f, 500.0f, 200.0f, 5.0f, 0.5f, 20.0f);
         MultiSpawner(voxel, 50, 100.0f, 500.0f, 200.0f, 5.0f, 0.5f, 20.0f);
-        MultiSpawner(coin, 100, 200.0f, 500.0f);
+        MultiSpawner(coin, 100, 200.0f, 500.0f, 0.0f, 0.0f, 1.0f, 4.0f);
         MultiSpawner(trigger, 33, 200.0f, 500.0f, 40.0f, 10.0f, 0.5f, 20.0f);
 
     }
