@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleMgr : MultiSpawner {
 
@@ -17,4 +18,9 @@ public class TitleMgr : MultiSpawner {
     void Update () {
 		
 	}
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }

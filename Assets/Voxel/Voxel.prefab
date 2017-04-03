@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 33611903722072120}
   - component: {fileID: 65087259624710826}
   - component: {fileID: 23956269402055256}
+  - component: {fileID: 114535600174969474}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -135,3 +136,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: {x: 0, y: 0, z: 0}
   duration: 0
+--- !u!114 &114535600174969474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943829052677634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7d96280ee266e4786ec0b39c5247eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glitchMat: {fileID: 2100000, guid: a7776b65ab6c2654c9dc42e1d9b68ee9, type: 2}
