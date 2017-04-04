@@ -611,7 +611,7 @@ MonoBehaviour:
   watever: {fileID: 1135469652527212, guid: d0bbde83f60716745a937e358d6b44a6, type: 2}
   voxel: {fileID: 1135469652527212, guid: 8440bbaa56a16b84ead689676c6b2292, type: 2}
   coin: {fileID: 1545564089164542, guid: ba9da42269247e7459e89b0aa607c349, type: 2}
-  trigger: {fileID: 0}
+  trigger: {fileID: 1981654345751916, guid: 6cd546950c3e9f84eb23a48c1100ccd0, type: 2}
   roid: {fileID: 1138745050941356, guid: b2201f088d849974db38b3ceb3ae46be, type: 2}
 --- !u!4 &611313509
 Transform:

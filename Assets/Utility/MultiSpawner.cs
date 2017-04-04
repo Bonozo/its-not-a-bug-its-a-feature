@@ -7,6 +7,12 @@ public class MultiSpawner : MonoBehaviour
 
     public void MultiSpawn(GameObject spawnObj, int Qty, float posDiameter, float posHeight, float moverDist = 0.0f, float moverDuration = 0.0f, float spawnScaleMin = 1.0f, float spawnScaleMax = 1.0f)
     {
+        if (spawnObj == null)
+        {
+            Debug.LogError("MultiSpawn: GameObject missing.");
+            return;
+        }
+
         for (int i = 0; i < Qty; i++)
         {
             Vector3 spawnPos = new Vector3(
@@ -32,7 +38,7 @@ public class MultiSpawner : MonoBehaviour
                     Random.Range(-moverDist * 0.5f, moverDist * 0.5f));
 
                 voxelMover.distance = distance;
-                voxelMover.duration = 5.0f;
+                voxelMover.duration = moverDuration * 0.25f + Random.Range( 0.0f, moverDuration * 0.75f );
             }
         }
     }
