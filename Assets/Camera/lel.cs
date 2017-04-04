@@ -1,7 +1,8 @@
+#if HAMMERSEDGE
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 public class lel : MonoBehaviour {
 	void Update ()
@@ -13,7 +14,8 @@ public class lel : MonoBehaviour {
             RenderSettings.skybox = mat;
         }
         RenderSettings.ambientLight = new Color(Mathf.PerlinNoise(0f, 255f), Mathf.PerlinNoise(0f, 255f), Mathf.PerlinNoise(0f, 255f));
-        RenderSettings.ambientIntensity = Random.RandomRange(0f, 2f);
+        RenderSettings.ambientIntensity = Random.Range(0f, 2f);
         Time.timeScale = Random.Range(0.5f, 1f);
     }
 }
+#endif
