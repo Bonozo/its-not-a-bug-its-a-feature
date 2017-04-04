@@ -435,7 +435,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: verison Unhandled Exception Error 0x80080001
+  m_Text: verison Unhandled Exception Error 0x80008001
 --- !u!222 &397708511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -712,7 +712,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 659a9b474f937bf43b3a207337686a89,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8eb01796d12a6074c830eb99892947d2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5aa2ce0374edcd746ad731f6190ac8fd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

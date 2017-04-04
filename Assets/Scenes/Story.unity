@@ -226,8 +226,9 @@ GameObject:
   - component: {fileID: 941306914}
   - component: {fileID: 941306916}
   - component: {fileID: 941306915}
+  - component: {fileID: 941306917}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PreludeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,24 +284,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'WHILE TRAVELLING BETWEEN UNIVERSES,
-
-    MAJOR BUG OF MARS ("BUG" IS MARTIAN FOR "JOE")
-
-    RECEIVED AN UNHANDLED EXCEPTION ERROR IN SHIP SOFTWARE,
-
-    WHICH RESULTED IN ITS DESTRUCTION.
-
-
-    HOW LONG WILL MAJOR BUG SURVIVE
-
-    IN THE JANK DIMENSION'
+  m_Text: 
 --- !u!222 &941306916
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941306913}
+--- !u!114 &941306917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941306913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7a930b5004fcc49aead17a1c98035b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextObj: {fileID: 941306915}
+  charDelay: 0.1
+  readoutText: WHILE TRAVELLING BETWEEN UNIVERSES,^MAJOR BUG OF MARS ("BUG" IS MARTIAN
+    FOR "JOE")^RECEIVED AN UNHANDLED EXCEPTION ERROR IN SHIP SOFTWARE,^WHICH RESULTED
+    IN ITS DESTRUCTION.^^HOW LONG WILL MAJOR BUG SURVIVE IN THE JANK DIMENSION
 --- !u!1 &959505308
 GameObject:
   m_ObjectHideFlags: 0
