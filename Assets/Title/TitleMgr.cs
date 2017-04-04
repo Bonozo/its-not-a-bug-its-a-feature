@@ -10,7 +10,8 @@ public class TitleMgr : MultiSpawner {
     public GameObject roid;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         MultiSpawn(voxel, 50, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 10.0f);
         MultiSpawn(watever, 25, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 10.0f);
         MultiSpawn(roid, 10, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 5.0f);
@@ -23,6 +24,6 @@ public class TitleMgr : MultiSpawner {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Story");
     }
 }
