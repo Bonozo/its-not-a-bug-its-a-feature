@@ -8,6 +8,7 @@ public class TitleMgr : MultiSpawner {
     public GameObject voxel;
     public GameObject watever;
     public GameObject roid;
+    public GameObject difficulty;
 
     // Use this for initialization
     void Start ()
@@ -56,9 +57,29 @@ public class TitleMgr : MultiSpawner {
 		
 	}
 
-    public void PlayGame()
+    public void PressStart()
+    {
+        difficulty.SetActive(true);
+    }
+
+    public void LoadGame()
     {
         SceneManager.LoadScene("Story");
         SceneManager.LoadScene("Ship", LoadSceneMode.Additive);
+    }
+
+    public void DifficultyHard()
+    {
+        System.Diagnostics.Debugger.Launch();
+    }
+
+    public void DifficultyNorm()
+    {
+        LoadGame();
+    }
+
+    public void DifficultyEasy()
+    {
+        System.Diagnostics.Debugger.Launch();
     }
 }
