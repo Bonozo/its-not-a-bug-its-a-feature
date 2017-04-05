@@ -25,10 +25,12 @@ public class GameplayMgr : MultiSpawner{
     int zoneIdx;
     private GameObject playerObj;
     private Player playerObjPlayer;
+    private int currStage = 0;
 
     // Use this for initialization
     void Start ()
     {
+        currStage = 0;
         SpawnPlayer();
     }
 	
@@ -53,12 +55,12 @@ public class GameplayMgr : MultiSpawner{
         if (ScoreText == null)
             return;
 
-        ScoreText.text = points.ToString();
+        ScoreText.text = (points / 100).ToString();
 
         if (points > hiScore)
         {
             hiScore = points;
-            HiScoreText.text = points.ToString();
+            HiScoreText.text = (points/100).ToString();
         }
 
     }
@@ -74,7 +76,7 @@ public class GameplayMgr : MultiSpawner{
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = 1;// Random.Range(0, 4);
+        int select = Random.Range(0, 5);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
@@ -86,13 +88,13 @@ public class GameplayMgr : MultiSpawner{
         MultiSpawnDef msd = new MultiSpawnDef();
         msd.spawnObj = objToSpawn;
         msd.Qty = 100;
-        msd.posDiameter = 200.0f;
+        msd.posDiameter = 400.0f;
         msd.posLow = posLow;
         msd.posHeight = posHeight;
         msd.moverDist = 0.0f;
         msd.moverDuration = 0.0f;
-        msd.spawnScaleMin = 50.0f;
-        msd.spawnScaleMax = 50.0f;
+        msd.spawnScaleMin = 5.0f + currStage * 2;
+        msd.spawnScaleMax = 10.0f + currStage * 2;
         zoneObjs[zoneIdx] = MultiSpawn(msd);
     }
 
@@ -103,11 +105,11 @@ public class GameplayMgr : MultiSpawner{
         {
             float currPlayerY = playerObjPlayer.rigidBody.transform.position.y;
 
-            int currZone = Mathf.FloorToInt(currPlayerY / 500.0f);
+            int currZone = Mathf.FloorToInt(currPlayerY / 1000.0f);
             if(currZone < prevZoneCache)
             {
-                float posHeight = 500.0f * currZone;
-                float posLow = posHeight - 500.0f;
+                float posHeight = 1000.0f * currZone;
+                float posLow = posHeight - 1000.0f;
 
                 if (zoneObjs[zoneIdx] == null)
                 {
@@ -121,6 +123,8 @@ public class GameplayMgr : MultiSpawner{
                 }
 
                 zoneIdx ^= 1;
+
+                currStage++;
             }
 
 

@@ -166,6 +166,13 @@ public class Player : MonoBehaviour {
 
     }
 
+    public void PlayerBonus( int bonus )
+    {
+        Score += bonus;
+
+        DisplayScore();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;

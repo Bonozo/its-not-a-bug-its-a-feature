@@ -9,6 +9,7 @@ public class StoryMgr : MonoBehaviour {
     public GameObject player;
     public GameObject xploPfx;
     public float xploScale = 1.0f;
+    public GameObject fader;
 
     private bool IsDone = false;
 
@@ -32,11 +33,19 @@ public class StoryMgr : MonoBehaviour {
                 }
 
                 player.SetActive(false);
+                StartCoroutine(TheEnd());
             }
 
             IsDone = true;
         }
 	}
+
+    private IEnumerator TheEnd()
+    {
+        yield return new WaitForSeconds(2.0f);
+        fader.SetActive(true);
+        Next();
+    }
 
     public void Next()
     {
