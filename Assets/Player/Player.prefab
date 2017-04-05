@@ -2373,6 +2373,7 @@ MonoBehaviour:
   xploPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 2}
   gameplayMgr: {fileID: 0}
   cameraController: {fileID: 0}
+  bounds: {x: 100, y: 100}
 --- !u!114 &114950823714389492
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public GameObject xploPrefab;
     public GameplayMgr gameplayMgr;
     public CameraController cameraController;
+    public Vector2 bounds;
 
     private MeshRenderer renderObject;
     private GameObject pfxAttached;
@@ -88,7 +89,35 @@ public class Player : MonoBehaviour {
         */
 
 
+        UpdateInbounds();
         UpdateScore();
+
+    }
+
+    void UpdateInbounds()
+    {
+        Vector3 playerPos = rigidBody.transform.position;
+        float pushForce = 3000.0f;
+
+        if (playerPos.x < bounds.x * -0.5f)
+        {
+            rigidBody.AddForce(new Vector3(pushForce, 0.0f, 0.0f));
+        }
+
+        if (playerPos.x > bounds.x * 0.5f)
+        {
+            rigidBody.AddForce(new Vector3(-pushForce, 0.0f, 0.0f));
+        }
+
+        if (playerPos.z < bounds.y * -0.5f)
+        {
+            rigidBody.AddForce(new Vector3(0.0f, 0.0f, pushForce));
+        }
+
+        if (playerPos.z > bounds.y * 0.5f)
+        {
+            rigidBody.AddForce(new Vector3(0.0f, 0.0f, -pushForce));
+        }
     }
 
     private IEnumerator Flash()
