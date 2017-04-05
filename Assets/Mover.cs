@@ -52,4 +52,32 @@ public class Mover : MonoBehaviour {
             }
         }
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (tag == "Playerxxx")
+        {
+            Player player = other.transform.root.gameObject.GetComponent<Player>();
+            if (player)
+                player.PlayerHit();
+            gameObject.transform.parent = other.transform.parent;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        GameObject other = collision.gameObject;
+        string tag = other.tag;
+
+        if (tag == "Playerxxx")
+        {
+            gameObject.transform.parent = null;
+        }
+
+        //foreach (ContactPoint contact in collision.contacts)
+        //{
+        //    Debug.DrawRay(contact.point, contact.normal, Color.white);
+        //}
+    }
+
 }

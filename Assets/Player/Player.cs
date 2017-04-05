@@ -39,11 +39,18 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void UpdateScore()
+    void UpdateScore()
     {
         Score += -rigidBody.velocity.y;
 
         gameplayMgr.SetScore((int)Score);
+    }
+
+    void UpdateHP(float dmg)
+    {
+        hp -= dmg;
+
+        gameplayMgr.SetHP((int)hp);
     }
 
     // Update is called once per frame
@@ -127,58 +134,33 @@ public class Player : MonoBehaviour {
         renderObject.material.color = Color.white;
     }
 
+    public void PlayerHit()
+    {
+        UpdateHP(1.0f);
+
+        if (hp > 0.0f)
+        {
+            // hit
+            GameObject xplogo = Instantiate(xploPrefab, gameObject.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            // die
+            GameObject xplogo = Instantiate(xploPrefab, gameObject.transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
+            cameraController.GameOver();
+            gameplayMgr.GameOver();
+        }
+
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;
         string tag = other.tag;
-
-        if( tag == "Pain" )
-        {
-            StartCoroutine(Flash());
-        }
-
-        if (tag == "Mover")
-        {
-            gameObject.transform.parent = other.transform.parent;
-
-            hp -= 50.0f;
-            if( hp <= 0.0f )
-            {
-                // hit
-                StartCoroutine(Flash());
-            }
-            else
-            {
-                // die
-                GameObject xplogo = Instantiate(xploPrefab, gameObject.transform.position, Quaternion.identity);
-                xplogo.transform.localScale *= 1.0f;
-
-                Destroy(gameObject);
-                cameraController.GameOver();
-                gameplayMgr.GameOver();
-            }
-        }
-
-        //foreach (ContactPoint contact in collision.contacts)
-        //{
-        //    Debug.DrawRay(contact.point, contact.normal, Color.white);
-        //}
     }
 
 
-    void OnCollisionExit(Collision collision)
-    {
-        GameObject other = collision.gameObject;
-        string tag = other.tag;
 
-        if (tag == "Mover")
-        {
-            gameObject.transform.parent = null;
-        }
-
-        //foreach (ContactPoint contact in collision.contacts)
-        //{
-        //    Debug.DrawRay(contact.point, contact.normal, Color.white);
-        //}
-    }
 }

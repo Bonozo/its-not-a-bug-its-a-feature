@@ -9,6 +9,7 @@ public class GameplayMgr : MultiSpawner{
     public GameObject Player;
     public GameObject cameraController;
     public Text ScoreText;
+    public Text HpText;
 
     public GameObject watever;
     public GameObject voxel;
@@ -52,10 +53,18 @@ public class GameplayMgr : MultiSpawner{
         ScoreText.text = points.ToString("D9");
     }
 
+    public void SetHP(int points)
+    {
+        if (HpText == null)
+            return;
+
+        HpText.text = points.ToString();
+    }
+
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = Random.Range(0, 4);
+        int select = 1;// Random.Range(0, 4);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
@@ -72,8 +81,8 @@ public class GameplayMgr : MultiSpawner{
         msd.posHeight = posHeight;
         msd.moverDist = 0.0f;
         msd.moverDuration = 0.0f;
-        msd.spawnScaleMin = 1.0f;
-        msd.spawnScaleMax = 4.0f;
+        msd.spawnScaleMin = 50.0f;
+        msd.spawnScaleMax = 50.0f;
         zoneObjs[zoneIdx] = MultiSpawn(msd);
     }
 
