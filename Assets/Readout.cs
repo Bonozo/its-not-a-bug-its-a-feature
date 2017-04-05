@@ -9,12 +9,12 @@ public class Readout : MonoBehaviour {
     public float charDelay = 0.0f;
     public string readoutText;
     public AudioSource readoutSfx;
+    public bool IsDone = false;
 
     private string readoutParsed;
     private int readoutIdx = 0;
     private float elapsed = 0.0f;
-    private bool readoutDone = false;
-    
+
 	// Use this for initialization
 	void Start ()
     {
@@ -24,7 +24,7 @@ public class Readout : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (readoutDone == false)
+        if (IsDone == false)
         {
             elapsed += Time.fixedDeltaTime;
 
@@ -32,7 +32,7 @@ public class Readout : MonoBehaviour {
             if (endPos > readoutParsed.Length)
             {
                 endPos = readoutParsed.Length;
-                readoutDone = true;
+                IsDone = true;
                 readoutSfx.loop = false;
             }
 

@@ -181,6 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0db239435acceb42bad47f6b6a13164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readout: {fileID: 941306917}
+  player: {fileID: 0}
+  xploPfx: {fileID: 1000011128802252, guid: 3a50460394a9886439f983ab9182b1fa, type: 2}
+  xploScale: 5
 --- !u!4 &119000092
 Transform:
   m_ObjectHideFlags: 0
@@ -442,6 +446,7 @@ MonoBehaviour:
     FOR "JOE")^RECEIVED AN UNHANDLED EXCEPTION ERROR^IN THE SHIP OPERATING SYSTEM,^WHICH
     RESULTED IN ITS DESTRUCTION.^^HOW LONG WILL MAJOR BUG SURVIVE^IN THE JANK DIMENSION...
   readoutSfx: {fileID: 941306918}
+  IsDone: 0
 --- !u!82 &941306918
 AudioSource:
   m_ObjectHideFlags: 0
