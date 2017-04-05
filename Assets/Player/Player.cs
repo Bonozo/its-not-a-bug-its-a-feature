@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 	void Start ()
     {
         renderObject = GetComponent<MeshRenderer>();
-
+/*
         if (pfxPrefab)
         {
             pfxAttached = Instantiate(pfxPrefab, gameObject.transform.position, Quaternion.AngleAxis(  0.0f, Vector3.up) );
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour {
             pfxAttached.transform.localScale *= 0.5f;
             pfxAttached.transform.parent = gameObject.transform;
         }
+*/
     }
 
     void UpdateScore()
@@ -141,12 +142,12 @@ public class Player : MonoBehaviour {
         if (hp > 0.0f)
         {
             // hit
-            GameObject xplogo = Instantiate(xploPrefab, gameObject.transform.position, Quaternion.identity);
+            GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
         }
         else
         {
             // die
-            GameObject xplogo = Instantiate(xploPrefab, gameObject.transform.position, Quaternion.identity);
+            GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
 
             Destroy(gameObject);
             cameraController.GameOver();
