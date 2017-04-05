@@ -19,8 +19,11 @@ public class PainObj : MonoBehaviour {
         if( other.transform.tag == "Player")
         {
             Player player = other.transform.root.gameObject.GetComponent<Player>();
-            if(player)
-                player.PlayerHit();
+            if (player)
+            {
+                float dmg = 1.0f * other.rigidbody.velocity.magnitude;
+                player.PlayerHit(dmg);
+            }
 
             //Debug.LogError("Player hit with " + other.collider.name);
         }

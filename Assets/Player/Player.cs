@@ -44,14 +44,19 @@ public class Player : MonoBehaviour {
     {
         Score += -rigidBody.velocity.y;
 
+        DisplayScore();
+    }
+
+    void DisplayScore()
+    {
         gameplayMgr.SetScore((int)Score);
     }
 
     void UpdateHP(float dmg)
     {
         hp -= dmg;
-
-        gameplayMgr.SetHP((int)hp);
+        if (hp < 0.0f)
+            hp = 0.0f;
     }
 
     // Update is called once per frame
@@ -100,6 +105,8 @@ public class Player : MonoBehaviour {
         UpdateInbounds();
         UpdateScore();
 
+        gameplayMgr.SetHP((int)hp);
+
     }
 
     void UpdateInbounds()
@@ -135,9 +142,12 @@ public class Player : MonoBehaviour {
         renderObject.material.color = Color.white;
     }
 
-    public void PlayerHit()
+    public void PlayerHit(float dmg)
     {
-        UpdateHP(1.0f);
+        if (hp <= 0.0f)
+            return;
+
+        UpdateHP(dmg);
 
         if (hp > 0.0f)
         {

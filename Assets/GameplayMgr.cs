@@ -10,6 +10,7 @@ public class GameplayMgr : MultiSpawner{
     public GameObject cameraController;
     public Text ScoreText;
     public Text HpText;
+    public Text HiScoreText;
 
     public GameObject watever;
     public GameObject voxel;
@@ -17,6 +18,8 @@ public class GameplayMgr : MultiSpawner{
     public GameObject trigger;
     public GameObject roid;
 
+    [SerializeField]
+    private int hiScore = 0;
     private int prevZoneCache;
     private GameObject[] zoneObjs = new GameObject[2];
     int zoneIdx;
@@ -50,7 +53,14 @@ public class GameplayMgr : MultiSpawner{
         if (ScoreText == null)
             return;
 
-        ScoreText.text = points.ToString("D9");
+        ScoreText.text = points.ToString();
+
+        if (points > hiScore)
+        {
+            hiScore = points;
+            HiScoreText.text = points.ToString();
+        }
+
     }
 
     public void SetHP(int points)

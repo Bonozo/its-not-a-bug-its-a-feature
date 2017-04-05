@@ -59,7 +59,9 @@ public class Mover : MonoBehaviour {
         {
             Player player = other.transform.root.gameObject.GetComponent<Player>();
             if (player)
-                player.PlayerHit();
+            {
+                player.PlayerHit(0.0f);
+            }
             gameObject.transform.parent = other.transform.parent;
         }
     }
