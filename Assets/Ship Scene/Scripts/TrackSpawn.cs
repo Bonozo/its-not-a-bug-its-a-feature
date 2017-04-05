@@ -8,41 +8,59 @@ public class TrackSpawn : MonoBehaviour
     [RangeAttribute(1, 20)]
     public int pieceRepeat = 3;
 
+    public float rotateSpeed = 1;
+
     public GameObject start;
     public GameObject finish;
 
-	void Start ()
+    private GameObject track;
+    private float rotateAngle = 0;
+
+    void Start()
     {
+        track = new GameObject();
+        track.transform.position = new Vector3(0, 50, 0);
+
         Vector3 pp = Vector3.zero;
 
         //create start
-        GameObject t = Instantiate(start, pp, Quaternion.identity);
-        pp.z -= t.GetComponentInChildren<Renderer>().bounds.size.z;
+        GameObject ts = Instantiate(start, pp, Quaternion.identity);
+        ts.transform.parent = track.transform;
 
-        for (int i=0; i< totalTrackPieces; i++)
+        pp.z -= ts.GetComponentInChildren<Renderer>().bounds.size.z;
+
+        for (int i = 0; i < totalTrackPieces; i++)
         {
-            TrackConnect tc = t.GetComponent<TrackConnect>();
+            TrackConnect tc = ts.GetComponent<TrackConnect>();
             if (tc)
             {
-                GameObject g = tc.trackConnections[Random.Range(0, tc.trackConnections.Capacity)];
+                GameObject t = tc.trackConnections[Random.Range(0, tc.trackConnections.Capacity)];
 
-                for (int l=0; l< pieceRepeat; l++)
+                for (int l = 0; l < pieceRepeat; l++)
                 {
-                    Instantiate(g, pp, Quaternion.identity);
-                    pp.z -= g.GetComponentInChildren<Renderer>().bounds.size.z;
-                }
+                    GameObject tp = Instantiate(t, pp, Quaternion.identity);
+                    tp.transform.parent = track.transform;
 
-                t = g;
+                    pp.z -= tp.GetComponentInChildren<Renderer>().bounds.size.z;
+                    ts = tp;
+                }
             }
             else
             {
-                Debug.Log("Missing connections!" + t.name);
+                Debug.Log("Missing connections!" + tc.name);
             }
         }
 
         //create end
-        Instantiate(finish, pp, Quaternion.identity);
+        GameObject ep = Instantiate(finish, pp, Quaternion.identity);
+        ep.transform.parent = track.transform;
 
     }
 
+    private void Update()
+    {
+        track.transform.RotateAround(Vector3.forward, rotateAngle);
+        rotateAngle += .001f;
+
+    }
 }
