@@ -59,5 +59,6 @@ public class TitleMgr : MultiSpawner {
     public void PlayGame()
     {
         SceneManager.LoadScene("Story");
+        SceneManager.LoadScene("Ship", LoadSceneMode.Additive);
     }
 }
