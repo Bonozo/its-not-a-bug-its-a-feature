@@ -1076,6 +1076,7 @@ MonoBehaviour:
   watever: {fileID: 1135469652527212, guid: d0bbde83f60716745a937e358d6b44a6, type: 2}
   roid: {fileID: 100000, guid: 6824a22db6f52424bbe7d102ce465552, type: 3}
   difficulty: {fileID: 878917781}
+  crasher: {fileID: 114240313477104446, guid: 77a3ea5619e7c8e4096ac34c39c02085, type: 2}
 --- !u!4 &930205615
 Transform:
   m_ObjectHideFlags: 0

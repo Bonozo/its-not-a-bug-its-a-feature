@@ -9,6 +9,7 @@ public class TitleMgr : MultiSpawner {
     public GameObject watever;
     public GameObject roid;
     public GameObject difficulty;
+    public CrashMe crasher;
 
     // Use this for initialization
     void Start ()
@@ -70,7 +71,7 @@ public class TitleMgr : MultiSpawner {
 
     public void DifficultyHard()
     {
-        System.Diagnostics.Debugger.Launch();
+        crasher.Crash();
     }
 
     public void DifficultyNorm()
@@ -80,6 +81,6 @@ public class TitleMgr : MultiSpawner {
 
     public void DifficultyEasy()
     {
-        System.Diagnostics.Debugger.Launch();
+        crasher.Crash();
     }
 }
