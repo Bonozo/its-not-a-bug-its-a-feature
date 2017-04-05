@@ -12,9 +12,43 @@ public class TitleMgr : MultiSpawner {
     // Use this for initialization
     void Start ()
     {
-        MultiSpawn(voxel, 50, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 10.0f);
-        MultiSpawn(watever, 25, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 10.0f);
-        MultiSpawn(roid, 10, 100.0f, 100.0f, 50.0f, 3.0f, 0.25f, 5.0f);
+        MultiSpawnDef msd;
+        
+        msd = new MultiSpawnDef();
+        msd.spawnObj = voxel;
+        msd.Qty = 50;
+        msd.posDiameter = 100.0f;
+        msd.posLow = 0.0f;
+        msd.posHeight = 100.0f;
+        msd.moverDist = 50.0f;
+        msd.moverDuration = 3.0f;
+        msd.spawnScaleMin = 0.25f;
+        msd.spawnScaleMax = 10.0f;
+        MultiSpawn(msd);
+
+        msd = new MultiSpawnDef();
+        msd.spawnObj = watever;
+        msd.Qty = 25;
+        msd.posDiameter = 100.0f;
+        msd.posLow = 0.0f;
+        msd.posHeight = 100.0f;
+        msd.moverDist = 50.0f;
+        msd.moverDuration = 3.0f;
+        msd.spawnScaleMin = 0.25f;
+        msd.spawnScaleMax = 10.0f;
+        MultiSpawn(msd);
+
+        msd = new MultiSpawnDef();
+        msd.spawnObj = roid;
+        msd.Qty = 10;
+        msd.posDiameter = 100.0f;
+        msd.posLow = 0.0f;
+        msd.posHeight = 100.0f;
+        msd.moverDist = 0.0f;
+        msd.moverDuration = 0.0f;
+        msd.spawnScaleMin = 1.0f;
+        msd.spawnScaleMax = 4.0f;
+        MultiSpawn(msd);
     }
 
     // Update is called once per frame

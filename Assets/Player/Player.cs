@@ -126,7 +126,7 @@ public class Player : MonoBehaviour {
 
                 Destroy(gameObject);
                 cameraController.GameOver();
-                gameplayMgr.Invoke("GameOver", 2.0f);
+                gameplayMgr.GameOver();
             }
         }
 

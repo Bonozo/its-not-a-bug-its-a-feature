@@ -4,28 +4,44 @@ using UnityEngine;
 
 public class MultiSpawner : MonoBehaviour
 {
-
-    public void MultiSpawn(GameObject spawnObj, int Qty, float posDiameter, float posHeight, float moverDist = 0.0f, float moverDuration = 0.0f, float spawnScaleMin = 1.0f, float spawnScaleMax = 1.0f)
+    public class MultiSpawnDef
     {
-        if (spawnObj == null)
+        public GameObject spawnObj;
+        public int Qty;
+        public float posDiameter;
+        public float posLow;
+        public float posHeight;
+        public float moverDist = 0.0f;
+        public float moverDuration = 0.0f;
+        public float spawnScaleMin = 1.0f;
+        public float spawnScaleMax = 1.0f;
+    }
+
+    public GameObject MultiSpawn(MultiSpawnDef multiSpawnDef)
+    {
+        if (multiSpawnDef.spawnObj == null)
         {
             Debug.LogError("MultiSpawn: GameObject missing.");
-            return;
+            return null;
         }
 
-        for (int i = 0; i < Qty; i++)
+        GameObject Zone = new GameObject("Zone" + multiSpawnDef.spawnObj.name);
+
+
+        for (int i = 0; i < multiSpawnDef.Qty; i++)
         {
             Vector3 spawnPos = new Vector3(
-                Random.Range(-posDiameter * 0.5f, posDiameter * 0.5f),
-                Random.Range(0.0f, posHeight),
-                Random.Range(-posDiameter * 0.5f, posDiameter * 0.5f));
+                Random.Range(-multiSpawnDef.posDiameter * 0.5f, multiSpawnDef.posDiameter * 0.5f),
+                Random.Range(multiSpawnDef.posLow, multiSpawnDef.posHeight),
+                Random.Range(-multiSpawnDef.posDiameter * 0.5f, multiSpawnDef.posDiameter * 0.5f));
 
-            GameObject voxelObj = Instantiate(spawnObj, spawnPos, Quaternion.identity);
+            GameObject voxelObj = Instantiate(multiSpawnDef.spawnObj, spawnPos, Quaternion.identity);
+            voxelObj.transform.parent = Zone.transform;
 
             Vector3 spawnSacle = new Vector3(
-                Random.Range(spawnScaleMin, spawnScaleMax),
-                Random.Range(spawnScaleMin, spawnScaleMax),
-                Random.Range(spawnScaleMin, spawnScaleMax));
+                Random.Range(multiSpawnDef.spawnScaleMin, multiSpawnDef.spawnScaleMax),
+                Random.Range(multiSpawnDef.spawnScaleMin, multiSpawnDef.spawnScaleMax),
+                Random.Range(multiSpawnDef.spawnScaleMin, multiSpawnDef.spawnScaleMax));
 
             voxelObj.transform.localScale = spawnSacle;
 
@@ -33,14 +49,16 @@ public class MultiSpawner : MonoBehaviour
             if (voxelMover)
             {
                 Vector3 distance = new Vector3(
-                    Random.Range(-moverDist * 0.5f, moverDist * 0.5f),
-                    Random.Range(-moverDist * 0.5f, moverDist * 0.5f),
-                    Random.Range(-moverDist * 0.5f, moverDist * 0.5f));
+                    Random.Range(-multiSpawnDef.moverDist * 0.5f, multiSpawnDef.moverDist * 0.5f),
+                    Random.Range(-multiSpawnDef.moverDist * 0.5f, multiSpawnDef.moverDist * 0.5f),
+                    Random.Range(-multiSpawnDef.moverDist * 0.5f, multiSpawnDef.moverDist * 0.5f));
 
                 voxelMover.distance = distance;
-                voxelMover.duration = moverDuration * 0.25f + Random.Range( 0.0f, moverDuration * 0.75f );
+                voxelMover.duration = multiSpawnDef.moverDuration * 0.25f + Random.Range( 0.0f, multiSpawnDef.moverDuration * 0.75f );
             }
         }
+
+        return Zone;
     }
 
 

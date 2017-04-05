@@ -16,6 +16,6 @@ public class BoneCollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + collision.transform.name);
+//        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + collision.transform.name);
     }
 }

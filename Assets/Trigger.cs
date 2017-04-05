@@ -29,7 +29,8 @@ public class Trigger : MonoBehaviour
                 objToActivate.SetActive(true);
             }
 
-            other.transform.localScale *= Random.Range(0.5f, 2.0f);// new Vector3(
+            //other.transform.localScale *= Random.Range(0.5f, 2.0f);
+            
             //other.transform.localScale *= new Vector3(
             //    Random.Range(0.5f, 4.0f),
             //    Random.Range(0.5f, 4.0f),
