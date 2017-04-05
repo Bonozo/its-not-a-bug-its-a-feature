@@ -12,6 +12,7 @@ public class CrashMe : MonoBehaviour
 
     public void Crash()
     {
+        PlayerPrefs.Save();
 //#if !UNITY_EDITOR
         GameObject crashObj = Instantiate(gameObject);
 //#endif

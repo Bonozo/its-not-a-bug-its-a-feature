@@ -71,16 +71,19 @@ public class TitleMgr : MultiSpawner {
 
     public void DifficultyHard()
     {
-        crasher.Crash();
-    }
+        PlayerPrefs.SetString("difficulty","hard");
+        LoadGame();
+    } 
 
     public void DifficultyNorm()
     {
+        PlayerPrefs.SetString("difficulty","norm");
         LoadGame();
     }
 
     public void DifficultyEasy()
     {
+        PlayerPrefs.SetString("difficulty","easy");
         crasher.Crash();
     }
 }

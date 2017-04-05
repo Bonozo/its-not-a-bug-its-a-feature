@@ -17,6 +17,7 @@ public class GameplayMgr : MultiSpawner{
     public GameObject coin;
     public GameObject trigger;
     public GameObject roid;
+    public CrashMe crasher;
 
     [SerializeField]
     private int hiScore = 0;
@@ -30,6 +31,9 @@ public class GameplayMgr : MultiSpawner{
     // Use this for initialization
     void Start ()
     {
+        hiScore = PlayerPrefs.GetInt("hiscore", 0);
+        DisplayHiScore();
+
         currStage = 0;
         SpawnPlayer();
     }
@@ -47,6 +51,11 @@ public class GameplayMgr : MultiSpawner{
 
     public void GameOver()
     {
+        if( PlayerPrefs.GetString("difficulty") == "hard")
+        {
+            crasher.Crash();
+        }
+
         SpawnPlayer();
     }
 
@@ -60,9 +69,15 @@ public class GameplayMgr : MultiSpawner{
         if (points > hiScore)
         {
             hiScore = points;
-            HiScoreText.text = (points/100).ToString();
+            PlayerPrefs.SetInt("hiscore", points);
+            DisplayHiScore();
         }
 
+    }
+
+    private void DisplayHiScore()
+    {
+        HiScoreText.text = (hiScore / 100).ToString();
     }
 
     public void SetHP(int points)
