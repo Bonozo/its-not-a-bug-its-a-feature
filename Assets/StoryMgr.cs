@@ -33,6 +33,7 @@ public class StoryMgr : MonoBehaviour {
                 }
 
                 player.SetActive(false);
+                JankSound.jankout();
                 StartCoroutine(TheEnd());
             }
 

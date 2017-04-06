@@ -445,6 +445,7 @@ MonoBehaviour:
   coin: {fileID: 1545564089164542, guid: ba9da42269247e7459e89b0aa607c349, type: 2}
   trigger: {fileID: 1981654345751916, guid: 6cd546950c3e9f84eb23a48c1100ccd0, type: 2}
   roid: {fileID: 1138745050941356, guid: b2201f088d849974db38b3ceb3ae46be, type: 2}
+  crasher: {fileID: 114240313477104446, guid: 77a3ea5619e7c8e4096ac34c39c02085, type: 2}
   hiScore: 0
 --- !u!82 &500921476
 AudioSource:
@@ -1450,8 +1451,8 @@ GameObject:
   - component: {fileID: 1901842142}
   - component: {fileID: 1901842141}
   - component: {fileID: 1901842146}
-  - component: {fileID: 1901842147}
   - component: {fileID: 1901842148}
+  - component: {fileID: 1901842147}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1546,11 +1547,21 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901842140}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3771944588ffa8d45b6dfcb411e0fea5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b0e1bae75339f94bb7702bc14007c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jankOn: 1
+  clickThisToTest: 0
+  jankFactorBaseline_01: 0
+  jankFactorDuringJankOut_01: 1
+  jankOutDecaySec: 2.34
+  jankTypeH_01: 0.36
+  jankTypeA_01: 0.32
+  jankTypeI_01: 0.31
+  vvv_no_touch_vvv: 0
+  test: 0
 --- !u!114 &1901842148
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class Intro : MonoBehaviour {
 
     IEnumerator LoadMain()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(11);
 
         SceneManager.LoadScene("Title");
     }

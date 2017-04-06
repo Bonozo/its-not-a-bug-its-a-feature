@@ -33,7 +33,8 @@ public class Readout : MonoBehaviour {
             {
                 endPos = readoutParsed.Length;
                 IsDone = true;
-                readoutSfx.loop = false;
+                if(readoutSfx)
+                    readoutSfx.loop = false;
             }
 
             TextObj.text = readoutParsed.Substring(0, endPos);

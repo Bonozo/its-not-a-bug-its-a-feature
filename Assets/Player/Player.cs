@@ -64,6 +64,7 @@ public class Player : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            JankSound.jankout();
             rigidBody.AddForce(new Vector3(0.0f, jumpForce, 0.0f));
         }
 
