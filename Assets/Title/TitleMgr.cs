@@ -9,6 +9,7 @@ public class TitleMgr : MultiSpawner {
     public GameObject watever;
     public GameObject roid;
     public GameObject difficulty;
+    public GameObject settings;
     public CrashMe crasher;
 
     // Use this for initialization
@@ -60,7 +61,15 @@ public class TitleMgr : MultiSpawner {
 
     public void PressStart()
     {
-        difficulty.SetActive(true);
+        SettingsPopup settingsPopup = settings.GetComponent<SettingsPopup>();
+        if (settingsPopup.difficultyToggle.isOn)
+        {
+            difficulty.SetActive(true);
+        }
+        else
+        {
+            LoadGame();
+        }
     }
 
     public void LoadGame()
@@ -85,5 +94,10 @@ public class TitleMgr : MultiSpawner {
     {
         PlayerPrefs.SetString("difficulty","easy");
         crasher.Crash();
+    }
+
+    public void ClosePopup()
+    {
+        difficulty.SetActive(false);
     }
 }
