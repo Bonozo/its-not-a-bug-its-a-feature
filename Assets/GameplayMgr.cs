@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayMgr : MultiSpawner{
@@ -153,5 +154,11 @@ public class GameplayMgr : MultiSpawner{
 
         }
 
+    }
+
+
+    public void LoadTitle()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
