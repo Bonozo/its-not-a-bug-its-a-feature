@@ -47,4 +47,8 @@ public class SettingsPopup : MonoBehaviour {
         master.SetFloat("Sfx", vol);
     }
 
+    public void ResetHiScore()
+    {
+        PlayerPrefs.SetInt("hiscore", 0);
+    }
 }
