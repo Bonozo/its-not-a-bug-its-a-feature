@@ -184,7 +184,7 @@ MonoBehaviour:
   readout: {fileID: 941306917}
   player: {fileID: 0}
   xploPfx: {fileID: 1000011128802252, guid: 3a50460394a9886439f983ab9182b1fa, type: 2}
-  xploScale: 5
+  xploScale: 12
   fader: {fileID: 258223106}
 --- !u!4 &119000092
 Transform:
