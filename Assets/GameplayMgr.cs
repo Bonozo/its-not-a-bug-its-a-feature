@@ -113,7 +113,7 @@ public class GameplayMgr : MultiSpawner{
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = 5;//Random.Range(0, 7);
+        int select = Random.Range(0, 7);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
