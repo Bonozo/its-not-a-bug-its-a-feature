@@ -21,6 +21,7 @@ public class GameplayMgr : MultiSpawner{
     public GameObject trigger;
     public GameObject roid;
     public CrashMe crasher;
+    public GameObject HelpPopup;
 
     [SerializeField]
     private int hiScore = 0;
@@ -110,7 +111,7 @@ public class GameplayMgr : MultiSpawner{
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = 3;// Random.Range(0, 5);
+        int select = Random.Range(0, 5);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
@@ -172,10 +173,18 @@ public class GameplayMgr : MultiSpawner{
 
 
             UpdateSpeed();
+            UpdateHelp();
         }
 
     }
 
+    public void UpdateHelp()
+    {
+        if(playerObjPlayer.rigidBody.transform.position.y < 300.0f )
+        {
+            HelpPopup.SetActive(false);
+        }
+    }
 
     public void LoadTitle()
     {
