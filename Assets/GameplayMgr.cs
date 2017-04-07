@@ -21,6 +21,7 @@ public class GameplayMgr : MultiSpawner{
     public GameObject trigger;
     public GameObject roid;
     public GameObject mine;
+    public GameObject ring;
     public CrashMe crasher;
     public GameObject HelpPopup;
 
@@ -112,7 +113,7 @@ public class GameplayMgr : MultiSpawner{
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = Random.Range(0, 6);
+        int select = 5;//Random.Range(0, 7);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
@@ -120,7 +121,8 @@ public class GameplayMgr : MultiSpawner{
             case 2: objToSpawn = coin; break;
             case 3: objToSpawn = trigger; break;
             case 4: objToSpawn = roid; break;
-            default: objToSpawn = mine; break;
+            case 5: objToSpawn = mine; break;
+            default: objToSpawn = ring; break;
         }
         MultiSpawnDef msd = new MultiSpawnDef();
         msd.spawnObj = objToSpawn;
