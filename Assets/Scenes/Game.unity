@@ -747,6 +747,7 @@ MonoBehaviour:
   coin: {fileID: 1545564089164542, guid: ba9da42269247e7459e89b0aa607c349, type: 2}
   trigger: {fileID: 1981654345751916, guid: 6cd546950c3e9f84eb23a48c1100ccd0, type: 2}
   roid: {fileID: 1138745050941356, guid: b2201f088d849974db38b3ceb3ae46be, type: 2}
+  mine: {fileID: 1064946699969974, guid: a0e7d4520d5e3014584f7019f2a172ed, type: 2}
   crasher: {fileID: 114240313477104446, guid: 77a3ea5619e7c8e4096ac34c39c02085, type: 2}
   HelpPopup: {fileID: 481811602}
   hiScore: 0
@@ -762,7 +763,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ba28035c990fe954e84ac49b72d8ef96, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.9
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -843,7 +844,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 1e3c9e8c81976b44bac882e50c4d3796, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.33
   m_Pitch: 1
   Loop: 1
   Mute: 0

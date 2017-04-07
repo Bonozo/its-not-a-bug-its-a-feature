@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PainObj : MonoBehaviour {
 
+    public GameObject xploPfx;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +27,19 @@ public class PainObj : MonoBehaviour {
                 player.PlayerHit(dmg);
             }
 
+            if(xploPfx)
+            {
+                GameObject xploObj = Instantiate(xploPfx, gameObject.transform.position, Quaternion.identity);
+                if(xploObj == null)
+                {
+                    Debug.LogError("PainObj OnCollisionEnter: xploObj failed.");
+                }
+                else
+                {
+                    xploObj.transform.localScale *= 25.0f;// other.transform.localScale;
+                }
+                Destroy(gameObject);
+            }
             //Debug.LogError("Player hit with " + other.collider.name);
         }
     }

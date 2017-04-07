@@ -55,14 +55,14 @@ public class Mover : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (tag == "Playerxxx")
+        if (tag == "Player")
         {
             Player player = other.transform.root.gameObject.GetComponent<Player>();
             if (player)
             {
                 player.PlayerHit(0.0f);
+                player.rigidBody.transform.parent = gameObject.transform.parent;
             }
-            gameObject.transform.parent = other.transform.parent;
         }
     }
 
@@ -71,9 +71,13 @@ public class Mover : MonoBehaviour {
         GameObject other = collision.gameObject;
         string tag = other.tag;
 
-        if (tag == "Playerxxx")
+        if (tag == "Player")
         {
-            gameObject.transform.parent = null;
+            Player player = other.transform.root.gameObject.GetComponent<Player>();
+            if (player)
+            {
+                player.rigidBody.transform.parent = null;
+            }
         }
 
         //foreach (ContactPoint contact in collision.contacts)
