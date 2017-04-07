@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class GameplayMgr : MultiSpawner{
 
+    public const float veloThresh = 10000.0f; // it's not a bug, it's a feature
+
     public GameObject RespawnPoint;
     public GameObject Player;
     public GameObject cameraController;
     public Text ScoreText;
     public Text HpText;
     public Text HiScoreText;
-
+    public Text SpeedText;
     public GameObject watever;
     public GameObject voxel;
     public GameObject coin;
@@ -35,7 +37,6 @@ public class GameplayMgr : MultiSpawner{
         hiScore = PlayerPrefs.GetInt("hiscore", 0);
         DisplayHiScore();
 
-        currStage = 0;
         SpawnPlayer();
     }
 	
@@ -44,6 +45,7 @@ public class GameplayMgr : MultiSpawner{
         playerObj = Instantiate(Player, RespawnPoint.transform.position, RespawnPoint.transform.rotation);
         prevZoneCache = 999999;
         zoneIdx = 0;
+        currStage = 0;
         playerObjPlayer = playerObj.GetComponent<Player>();
         playerObjPlayer.gameplayMgr = gameObject.GetComponent<GameplayMgr>();
         playerObjPlayer.cameraController = cameraController.GetComponent<CameraController>();
@@ -89,10 +91,26 @@ public class GameplayMgr : MultiSpawner{
         HpText.text = points.ToString();
     }
 
+    private void UpdateSpeed()
+    {
+        float speed = playerObjPlayer.rigidBody.velocity.magnitude;
+
+        SpeedText.text = speed.ToString("F2");
+
+        if( speed > veloThresh || speed < -veloThresh )
+        {
+            SpeedText.color = Color.red;
+        }
+        else
+        {
+            SpeedText.color = Color.white;
+        }
+    }
+
     void SpawnZone(float posLow, float posHeight)
     {
         GameObject objToSpawn;
-        int select = Random.Range(0, 5);
+        int select = 3;// Random.Range(0, 5);
         switch (select)
         {
             case 0: objToSpawn = watever; break;
@@ -152,6 +170,8 @@ public class GameplayMgr : MultiSpawner{
 
             prevZoneCache = currZone;
 
+
+            UpdateSpeed();
         }
 
     }

@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
     public GameplayMgr gameplayMgr;
     public CameraController cameraController;
     public Vector2 bounds;
+    public AudioSource hitSfx;
+    public AudioSource bonusSfx;
 
     private MeshRenderer renderObject;
     private GameObject pfxAttached;
@@ -42,6 +44,9 @@ public class Player : MonoBehaviour {
 
     void UpdateScore()
     {
+        if (rigidBody.velocity.magnitude > GameplayMgr.veloThresh)
+            return;
+
         Score += -rigidBody.velocity.y;
 
         DisplayScore();
@@ -52,7 +57,7 @@ public class Player : MonoBehaviour {
         gameplayMgr.SetScore((int)Score);
     }
 
-    void UpdateHP(float dmg)
+    void TakeDamage(float dmg)
     {
         hp -= dmg;
         if (hp < 0.0f)
@@ -145,20 +150,30 @@ public class Player : MonoBehaviour {
 
     public void PlayerHit(float dmg)
     {
+        hitSfx.Play();
+
         if (hp <= 0.0f)
             return;
 
-        UpdateHP(dmg);
+        TakeDamage(dmg);
 
         if (hp > 0.0f)
         {
             // hit
-            GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
+            if(pfxPrefab)
+            {
+                GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
+                xplogo.transform.localScale *= 3.0f;
+            }
         }
         else
         {
             // die
-            GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
+            if (pfxPrefab)
+            {
+                GameObject xplogo = Instantiate(pfxPrefab, rigidBody.transform.position, Quaternion.identity);
+                xplogo.transform.localScale *= 3.0f;
+            }
 
             Destroy(gameObject);
             cameraController.GameOver();
@@ -172,6 +187,8 @@ public class Player : MonoBehaviour {
         Score += bonus;
 
         DisplayScore();
+
+        bonusSfx.Play();
     }
 
     void OnCollisionEnter(Collision collision)

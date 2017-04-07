@@ -21,7 +21,7 @@ public class PainObj : MonoBehaviour {
             Player player = other.transform.root.gameObject.GetComponent<Player>();
             if (player)
             {
-                float dmg = 1.0f * other.rigidbody.velocity.magnitude;
+                float dmg = other.rigidbody.velocity.magnitude / 100.0f;
                 player.PlayerHit(dmg);
             }
 
