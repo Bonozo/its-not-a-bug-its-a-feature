@@ -25,7 +25,7 @@ public class TitleMgr : MultiSpawner {
         msd.posLow = 0.0f;
         msd.posHeight = 100.0f;
         msd.moverDist = 50.0f;
-        msd.moverDuration = 3.0f;
+        msd.moverDuration = 10.0f;
         msd.spawnScaleMin = 0.25f;
         msd.spawnScaleMax = 10.0f;
         MultiSpawn(msd);
@@ -37,7 +37,7 @@ public class TitleMgr : MultiSpawner {
         msd.posLow = 0.0f;
         msd.posHeight = 100.0f;
         msd.moverDist = 50.0f;
-        msd.moverDuration = 3.0f;
+        msd.moverDuration = 10.0f;
         msd.spawnScaleMin = 0.25f;
         msd.spawnScaleMax = 10.0f;
         MultiSpawn(msd);
