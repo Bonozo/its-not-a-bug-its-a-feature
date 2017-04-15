@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Story.unity
   - enabled: 1
     path: Assets/Ship Scene/Ship.unity
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity

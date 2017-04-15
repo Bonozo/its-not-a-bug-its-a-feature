@@ -37,6 +37,8 @@ public class GameplayMgr : MultiSpawner{
     // Use this for initialization
     void Start ()
     {
+        SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+
         hiScore = PlayerPrefs.GetInt("hiscore", 0);
         DisplayHiScore();
 

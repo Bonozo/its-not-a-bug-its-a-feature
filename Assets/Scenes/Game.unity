@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -48.099854, y: 33.100006}
+  m_AnchoredPosition: {x: -48.099854, y: 59.57}
   m_SizeDelta: {x: 70, y: 23.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500608140
@@ -748,6 +748,7 @@ MonoBehaviour:
   trigger: {fileID: 1981654345751916, guid: 6cd546950c3e9f84eb23a48c1100ccd0, type: 2}
   roid: {fileID: 1138745050941356, guid: b2201f088d849974db38b3ceb3ae46be, type: 2}
   mine: {fileID: 1064946699969974, guid: a0e7d4520d5e3014584f7019f2a172ed, type: 2}
+  ring: {fileID: 0}
   crasher: {fileID: 114240313477104446, guid: 77a3ea5619e7c8e4096ac34c39c02085, type: 2}
   HelpPopup: {fileID: 481811602}
   hiScore: 0

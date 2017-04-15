@@ -16,6 +16,8 @@ public class TitleMgr : MultiSpawner {
     // Use this for initialization
     void Start ()
     {
+        SceneManager.LoadScene("Settings",LoadSceneMode.Additive);
+
         MultiSpawnDef msd;
         
         msd = new MultiSpawnDef();
