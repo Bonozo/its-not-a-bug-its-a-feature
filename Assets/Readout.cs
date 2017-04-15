@@ -12,7 +12,6 @@ public class Readout : MonoBehaviour {
     public bool IsDone = false;
 
     private string readoutParsed;
-    private int readoutIdx = 0;
     private float elapsed = 0.0f;
 
 	// Use this for initialization
